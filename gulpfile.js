@@ -33,7 +33,6 @@ gulp.task('build:css', () => {
         .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
         .pipe(postcss(postcssConfig))
         .pipe(header(banner, { pkg: pkg }))
-        // .pipe(header(`/*! Utility.css v${pkg.version} ${pkg.homepage} */\n`))
         .pipe(gulp.dest(DIST_DIR))
 })
 
