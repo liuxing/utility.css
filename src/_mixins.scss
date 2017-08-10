@@ -1,5 +1,4 @@
-// Margin
+// Mixins
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
-.margin {
-  margin: 15px;
-}
+
+@import "mixins/visibility"

@@ -1,0 +1,21 @@
+// Grid
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-right: ($grid-gutter-width / -2);
+  margin-left: ($grid-gutter-width / -2);
+}
+
+@mixin make-col($size, $columns: $grid-columns) {
+  flex: 0 0 percentage($size / $columns);
+  max-width: percentage($size / $columns);
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    @include make-col($i, 12)
+  }
+}

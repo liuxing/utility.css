@@ -1,9 +1,15 @@
 // Text
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
+.text-small {
+  font-size: 80%;
+}
+
+.text-small {
+  font-size: 1.5rem;
+}
 
 // Alignment modifiers
-
 .text-left {
   text-align: left !important;
 }
@@ -20,10 +26,11 @@
   text-align: justify !important;
 }
 
-.text-nowrap   {
-   white-space: nowrap !important;
+.text-nowrap {
+  white-space: nowrap !important;
 }
 
+// Vertical
 .text-top {
   vertical-align: top !important;
 }
@@ -54,15 +61,32 @@
 }
 
 // Weight and italics
-
-.font-weight-normal {
+.text-weight-normal {
   font-weight: $font-weight-normal !important;
 }
 
-.font-weight-bold {
+.text-weight-bold {
   font-weight: $font-weight-bold !important;
 }
 
-.font-italic {
+.text-italic {
   font-style: italic !important;
+}
+
+// Text wrapping
+.text-truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-break {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.text-nowrap {
+  white-space: nowrap;
 }

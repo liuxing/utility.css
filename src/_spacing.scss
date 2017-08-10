@@ -1,0 +1,41 @@
+// Margin and Padding
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+$spacers: (
+  // default: $global-gutter,
+  small  : $global-small-gutter,
+  medium : $global-medium-gutter,
+  large  : $global-large-gutter,
+  remove : 0,
+) !default;
+
+@each $prop in (margin, padding) {
+  .#{$prop} {
+    #{$prop}: 15px !important;
+  }
+  @each $size, $length in $spacers {
+    .#{$prop}-#{$size} {
+      #{$prop}: $length !important;
+    }
+    .#{$prop}-top-#{$size} {
+      #{$prop}-top: $length !important;
+    }
+    .#{$prop}-right-#{$size} {
+      #{$prop}-right: $length !important;
+    }
+    .#{$prop}-bottom-#{$size} {
+      #{$prop}-bottom: $length !important;
+    }
+    .#{$prop}-left-#{$size} {
+      #{$prop}-left: $length !important;
+    }
+    .#{$prop}-horizontal-#{$size} {
+      #{$prop}-left: $length !important;
+      #{$prop}-right: $length !important;
+    }
+    .#{$prop}-vertical-#{$size} {
+      #{$prop}-top: $length !important;
+      #{$prop}-bottom: $length !important;
+    }
+  }
+}
