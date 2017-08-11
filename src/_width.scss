@@ -1,0 +1,75 @@
+// Width
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+$columns:$grid-columns;
+// width
+@for $i from 1 through $columns {
+  @for $j from 1 through $i {
+    .width-#{$j}-#{$i} {
+      flex: 0 0 percentage($j / $i);
+      max-width: percentage($j / $i);
+    }
+  }
+}
+
+.width-expand {
+  flex: 1;
+  min-width: 0;
+  flex-basis: 1px;
+}
+
+.width-auto {
+  width: auto;
+}
+
+// Child width
+@for $i from 1 through $columns {
+  .child-width-1-#{$i}>* {
+    flex: 0 0 percentage(1 / $i);
+    max-width: percentage(1 / $i);
+  }
+}
+
+@media screen and (min-width: 576px) {
+  @for $i from 1 through $columns {
+    @for $j from 1 through $i {
+      .width-sm-#{$j}-#{$i} {
+        flex: 0 0 percentage($j / $i);
+        max-width: percentage($j / $i);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  @for $i from 1 through $columns {
+    @for $j from 1 through $i {
+      .width-md-#{$j}-#{$i} {
+        flex: 0 0 percentage($j / $i);
+        max-width: percentage($j / $i);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  @for $i from 1 through $columns {
+    @for $j from 1 through $i {
+      .width-lg-#{$j}-#{$i} {
+        flex: 0 0 percentage($j / $i);
+        max-width: percentage($j / $i);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  @for $i from 1 through $columns {
+    @for $j from 1 through $i {
+      .width-xl-#{$j}-#{$i} {
+        flex: 0 0 percentage($j / $i);
+        max-width: percentage($j / $i);
+      }
+    }
+  }
+}

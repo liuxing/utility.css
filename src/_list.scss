@@ -1,0 +1,25 @@
+// List
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.list {
+  padding: 0;
+  list-style: none;
+}
+
+.list-inline {
+  padding-left: 0;
+  margin-left: -5px;
+  list-style: none;
+}
+
+.list-inline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.list-divider > li:nth-child(n+2){
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}

@@ -1,7 +1,16 @@
 // Grid
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
+$grid-gutter-width: $global-gutter;
+$grid-gutter-horizontal: $global-gutter;
 
-.row {
+$grid-gutter: (
+  small   : $global-small-gutter,
+  medium  : $global-medium-gutter,
+  large   : $global-large-gutter,
+  collapse: 0
+) !default;
+
+.grid {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -9,13 +18,26 @@
   margin-left: ($grid-gutter-width / -2);
 }
 
-@mixin make-col($size, $columns: $grid-columns) {
-  flex: 0 0 percentage($size / $columns);
-  max-width: percentage($size / $columns);
+.grid {
+  margin-left: (-$grid-gutter-horizontal);
 }
 
-@for $i from 1 through 12 {
-  .col-#{$i} {
-    @include make-col($i, 12)
+.grid>* {
+  padding-left: $grid-gutter-horizontal;
+}
+
+@each $size, $length in $grid-gutter {
+  .grid-#{$size} {
+    margin-left: (-$length);
+  }
+  .grid-#{$size} > * {
+    padding-left: $length;
   }
 }
+
+// divider
+
+// .grid-divider > * {
+//   position: relative;
+// }
+
