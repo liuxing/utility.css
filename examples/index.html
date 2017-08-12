@@ -1,33 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Utility.css</title>
+    <link href="http://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet">
+    <!-- <link href="//cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="../dist/utility.css">
     <style>
-        html,body{
-            margin: 0;
-            padding: 0;
-        }
-
-        .box{
+        .box {
             width: 100px;
             height: 100px;
             background-color: #ccc;
+        }
+
+        .header {
+            background-color: #04d0e8;
+            color: #fff;
+            height: 60px;
+            line-height: 60px;
         }
     </style>
 </head>
 
 <body>
-    <header class="sticky-top text-capitalize text-weight-bold text-center border">
-        utility.css
+     <header class="header sticky-top text-center">
+        <h1 class="margin-remove text-capitalize">utility.css</h1>
     </header>
-    <p class="text-left">.text-left</p>
-    <p class="text-center">.text-center</p>
-    <p class="text-right">.text-right</p>
+    <img class="img-responsive" src="http://placehold.it/1920x400/04d0e8/fff&text=Utility.css" alt="">
+    <div class="container">
+        <section>
+            <h2>## Flex</h2>
+            <div class="flex">
+                <div class="box margin"></div>
+                <div class="box margin"></div>
+                <div class="box margin"></div>
+            </div>
+            <h3>### Horizontal alignment</h3>
+            <ul class="list list-divider">
+                <li><code>.flex-left</code> Add this class to align flex items to the left</li>
+                <li><code>.flex-center</code> Add this class to center flex items along the main axis.</li>
+                <li><code>.flex-right</code> Add this class to align flex items to the right.</li>
+                <li><code>.flex-between</code> Add this class to distribute items evenly, with equal space between the items
+                    along the main axis.
+                </li>
+                <li><code>.flex-around</code> Add this class to distribute items evenly with equal space on both sides of each
+                    item.
+                </li>
+
+            </ul>
+            <h4>#### flex-left</h4>
+            <div class="flex flex-left">
+                <div class="box margin"></div>
+                <div class="box margin"></div>
+                <div class="box margin"></div>
+            </div>
+            <h4>#### flex-center</h4>
+            <div class="flex flex-center">
+                <div class="box margin"></div>
+                <div class="box margin"></div>
+                <div class="box margin"></div>
+            </div>
+            <h4>#### flex-right</h4>
+            <div class="flex flex-right">
+                <div class="box margin"></div>
+                <div class="box margin"></div>
+                <div class="box margin"></div>
+            </div>
+            <h4>#### flex-between</h4>
+            <div class="flex flex-between">
+                <div class="box margin"></div>
+                <div class="box margin"></div>
+                <div class="box margin"></div>
+            </div>
+            <h4>#### flex-around</h4>
+            <div class="flex flex-around">
+                <div class="box margin"></div>
+                <div class="box margin"></div>
+                <div class="box margin"></div>
+            </div>
+            <h3>### Vertical alignment</h3>
+            <div class="flex flex-between">
+                <div class="box flex flex-top">.flex-top</div>
+                <div class="box flex flex-middle">.flex-middle</div>
+                <div class="box flex flex-bottom">.flex-bottom</div>
+            </div>
+            <h3>#### Direction modifiers</h3>
+            <h4>.flex-column</h4>
+            <div class="flex flex-column">
+                <div class="box margin"></div>
+                <div class="box margin"></div>
+                <div class="box margin"></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>## Float</h2>
+            <div class="clearfix">
+                <div class="box border-circle float-left flex flex-center flex-middle">.float-left</div>
+                <div class="box float-right flex flex flex-center flex-middle">.float-right</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>## Text</h2>
+            <h3>### Text Align</h3>
+            <p class="border text-left">.text-left</p>
+            <p class="border text-center">.text-center</p>
+            <p class="border text-right">.text-right</p>
+            <h3>### Text weight</h3>
+            <p class="border text-center text-lighter">.text-lighter</p>
+            <p class="border text-center text-normal">.text-normal</p>
+            <p class="border text-center text-bold">.text-bold</p>
+            <p class="border text-center text-italic">.text-italic</p>
+            <h3>### Text wrapping</h3>
+            <p class="border text-truncate width-1-2">.text-truncate .text-truncate .text-truncate .text-truncate .text-truncate .text-truncate .text-truncate .text-truncate .text-truncate .text-truncate </p>
+            <p class="border text-break width-1-2">.text-break text-break text-break text-break text-break text-break text-break text-break text-break</p>
+            <p class="border text-nowrap width-1-2">.text-nowrap .text-nowrap .text-nowrap .text-nowrap .text-nowrap .text-nowrap .text-nowrap .text-nowrap .text-nowrap </p>
+        </section>
+
+        <section>
+            <h2>## List</h2>
+            <h3>list</h3>
+            <ul class="list">
+                <li>list1</li>
+                <li>list2</li>
+                <li>list3</li>
+                <li>list4</li>
+            </ul>
+            <h3>list-inline</h3>
+            <ul class="list-inline">
+                <li>list-inline1</li>
+                <li>list-inline2</li>
+                <li>list-inline3</li>
+                <li>list-inline4</li>
+            </ul>
+            <h3>list-divider</h3>
+            <ul class="list list-divider">
+                <li>list1</li>
+                <li>list2</li>
+                <li>list3</li>
+                <li>list4</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>## margin padding</h2>
+        </section>
+    </div>
+
     <div class="grid">
         <div class="width-1-1">.width-1-1</div>
     </div>
@@ -75,39 +198,11 @@
         <div class="width-expand">.width-expand</div>
     </div>
 
-    <div class="clearfix">
-        <div class="box border-circle float-left"></div>
-        <div class="box float-right"></div>
-    </div>
-
     <div class="container">
         <div class="row flex-between">
             <div class="box border-rounded"></div>
         </div>
     </div>
-    <ul class="list">
-        <li>test</li>
-        <li>test</li>
-        <li>test</li>
-        <li>test</li>
-        <li>test</li>
-    </ul>
-
-    <ul class="list list-divider">
-        <li>test</li>
-        <li>test</li>
-        <li>test</li>
-        <li>test</li>
-        <li>test</li>
-    </ul>
-
-    <ul class="list-inline">
-        <li>test</li>
-        <li>test</li>
-        <li>test</li>
-        <li>test</li>
-        <li>test</li>
-    </ul>
 
     <hr>
 

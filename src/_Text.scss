@@ -1,6 +1,7 @@
 // Text
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
+// Style modifiers
 .text-small {
   font-size: 80%;
 }
@@ -10,6 +11,8 @@
 }
 
 // Alignment modifiers
+
+// Horizontal
 .text-left {
   text-align: left !important;
 }
@@ -24,10 +27,6 @@
 
 .text-justify {
   text-align: justify !important;
-}
-
-.text-nowrap {
-  white-space: nowrap !important;
 }
 
 // Vertical
@@ -61,11 +60,15 @@
 }
 
 // Weight and italics
-.text-weight-normal {
+.text-normal {
   font-weight: $font-weight-normal !important;
 }
 
-.text-weight-bold {
+.text-lighter {
+  font-weight: lighter;
+}
+
+.text-bold {
   font-weight: $font-weight-bold !important;
 }
 

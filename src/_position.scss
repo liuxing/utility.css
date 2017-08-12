@@ -1,6 +1,52 @@
 // Position
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
+// relative
+.position-relative {
+   position: relative !important;
+}
+
+// Absolute
+.position-absolute,
+[class*='position-top'],
+[class*='position-right'],
+[class*='position-bottom'],
+[class*='position-left'],
+[class*='position-center'] {
+  position: absolute !important;
+}
+
+.position-top {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.position-right {
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.position-bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.position-left {
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.position-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%)
+}
+
+// Fixed
 .fixed-top {
   position: fixed;
   top: 0;
