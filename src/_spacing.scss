@@ -1,39 +1,57 @@
 // Margin and Padding
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
+// Shorthand	Description
+//========================================
+//    m: Margin
+//    p: Padding
+//    t: Top
+//    r: Right
+//    b: Bottom
+//    l: Left
+//    x: X-axis    (left and right)
+//    y: Y-axis    (top  and bottom)
+//    0: 0         reset
+//    1: --space-1 (default 15px)
+//    2: --space-2 (default 30px)
+//    3: --space-3 (default 40px)
+//    4: --space-4 (default 70px)
+//========================================
+
 $spacers: (
-  // default: $global-gutter,
-  small  : $global-small-gutter,
-  medium : $global-medium-gutter,
-  large  : $global-large-gutter,
-  remove : 0,
+  0: 0,
+  1: $global-small-gutter,
+  2: $global-gutter,
+  3: $global-medium-gutter,
+  4: $global-large-gutter
 ) !default;
 
-@each $prop in (margin, padding) {
-  .#{$prop} {
+@each $prop, $abbrev in (margin: m, padding: p) {
+  .#{$abbrev} {
     #{$prop}: 15px !important;
   }
-  @each $size, $length in $spacers {
-    .#{$prop}-#{$size} {
+  @each $size,
+  $length in $spacers {
+    .#{$abbrev}#{$size} {
       #{$prop}: $length !important;
     }
-    .#{$prop}-top-#{$size} {
+    .#{$abbrev}t#{$size} {
       #{$prop}-top: $length !important;
     }
-    .#{$prop}-right-#{$size} {
+    .#{$abbrev}r#{$size} {
       #{$prop}-right: $length !important;
     }
-    .#{$prop}-bottom-#{$size} {
+    .#{$abbrev}b#{$size} {
       #{$prop}-bottom: $length !important;
     }
-    .#{$prop}-left-#{$size} {
+    .#{$abbrev}l#{$size} {
       #{$prop}-left: $length !important;
     }
-    .#{$prop}-horizontal-#{$size} {
+    .#{$abbrev}x#{$size} {
       #{$prop}-left: $length !important;
       #{$prop}-right: $length !important;
     }
-    .#{$prop}-vertical-#{$size} {
+    .#{$abbrev}y#{$size} {
       #{$prop}-top: $length !important;
       #{$prop}-bottom: $length !important;
     }

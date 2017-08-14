@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Utility.css</title>
+    <link href="http://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../dist/utility.css">
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+        }
+
+        .header {
+            background-color: #04d0e8;
+            color: #fff;
+            height: 60px;
+            line-height: 60px;
+        }
+
+        [class*="width"]>div {
+            background-color: #04d0e8;
+            margin: 10px 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header sticky-top text-center">
+        <h1 class="m0 text-capitalize text-lighter">utility.css</h1>
+    </header>
+    <div class="container">
+        <h3>### Grid</h3>
+        <div class="grid">
+            <div class="width-12 width-md-4 width-lg-3">
+                <div class="border">width-12 width-md-4</div>
+            </div>
+            <div class="width-12 width-md-8 width-lg-9">
+                <div class="border">width-12 width-md-8</div>
+            </div>
+        </div>
+        <h3>### offset</h3>
+        <div class="grid">
+            <div class="offset-11 width-1">
+                <div class="border text-truncate">offset-1 width-11</div>
+            </div>
+            <div class="offset-10 width-2">
+                <div class="border text-truncate">offset-2 width-10</div>
+            </div>
+            <div class="offset-9 width-3">
+                <div class="border text-truncate">offset-3 width-9</div>
+            </div>
+            <div class="offset-8 width-4">
+                <div class="border text-truncate">offset-4 width-8</div>
+            </div>
+            <div class="offset-7 width-5">
+                <div class="border text-truncate">offset-5 width-7</div>
+            </div>
+            <div class="offset-6 width-6">
+                <div class="border text-truncate">offset-6 width-6</div>
+            </div>
+            <div class="offset-5 width-7">
+                <div class="border text-truncate">offset-7 width-5</div>
+            </div>
+            <div class="offset-4 width-8">
+                <div class="border text-truncate">offset-8 width-4</div>
+            </div>
+            <div class="offset-3 width-9">
+                <div class="border text-truncate">offset-9 width-3</div>
+            </div>
+            <div class="offset-2 width-10">
+                <div class="border text-truncate">offset-10 width-2</div>
+            </div>
+            <div class="offset-1 width-11">
+                <div class="border text-truncate">offset-11 width-1</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

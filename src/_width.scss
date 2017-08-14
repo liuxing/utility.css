@@ -2,14 +2,13 @@
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 $columns:$grid-columns;
+
 // width
 @for $i from 1 through $columns {
-  @for $j from 1 through $i {
-    .width-#{$j}-#{$i} {
-      flex: 0 0 percentage($j / $i);
-      width: percentage($j / $i);
-      max-width: percentage($j / $i);
-    }
+  .width-#{$i} {
+    flex: 0 0 percentage($i / $columns);
+    width: percentage($i / $columns);
+    max-width: percentage($i / $columns);
   }
 }
 
@@ -31,46 +30,73 @@ $columns:$grid-columns;
   }
 }
 
-@media screen and (min-width: 576px) {
+// Offset
+@for $i from 1 through $columns - 1 {
+  .offset-#{$i} {
+    margin-left: percentage($i / $columns);
+  }
+}
+
+// Media query
+@media screen and (min-width: 568px) {
   @for $i from 1 through $columns {
-    @for $j from 1 through $i {
-      .width-sm-#{$j}-#{$i} {
-        flex: 0 0 percentage($j / $i);
-        max-width: percentage($j / $i);
-      }
+    .width-sm-#{$i} {
+      flex: 0 0 percentage($i / $columns);
+      width: percentage($i / $columns);
+      max-width: percentage($i / $columns);
+    }
+  }
+
+  @for $i from 1 through $columns - 1 {
+    .offset-sm-#{$i} {
+      margin-left: percentage($i / $columns);
     }
   }
 }
 
 @media screen and (min-width: 768px) {
   @for $i from 1 through $columns {
-    @for $j from 1 through $i {
-      .width-md-#{$j}-#{$i} {
-        flex: 0 0 percentage($j / $i);
-        max-width: percentage($j / $i);
-      }
+    .width-md-#{$i} {
+      flex: 0 0 percentage($i / $columns);
+      width: percentage($i / $columns);
+      max-width: percentage($i / $columns);
+    }
+  }
+
+  @for $i from 1 through $columns - 1 {
+    .offset-md-#{$i} {
+      margin-left: percentage($i / $columns);
     }
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
   @for $i from 1 through $columns {
-    @for $j from 1 through $i {
-      .width-lg-#{$j}-#{$i} {
-        flex: 0 0 percentage($j / $i);
-        max-width: percentage($j / $i);
-      }
+    .width-lg-#{$i} {
+      flex: 0 0 percentage($i / $columns);
+      width: percentage($i / $columns);
+      max-width: percentage($i / $columns);
+    }
+  }
+
+  @for $i from 1 through $columns - 1 {
+    .offset-lg-#{$i} {
+      margin-left: percentage($i / $columns);
     }
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   @for $i from 1 through $columns {
-    @for $j from 1 through $i {
-      .width-xl-#{$j}-#{$i} {
-        flex: 0 0 percentage($j / $i);
-        max-width: percentage($j / $i);
-      }
+    .width-xl-#{$i} {
+      flex: 0 0 percentage(1 / $i);
+      max-width: percentage(1 / $i);
+    }
+  }
+
+  @for $i from 1 through $columns - 1 {
+    .offset-xl-#{$i} {
+      margin-left: percentage($i / $columns);
     }
   }
 }
