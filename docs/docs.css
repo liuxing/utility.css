@@ -1,0 +1,17 @@
+.doc-sidebar-left{
+    position: fixed;
+    height: 100vh;
+    overflow: auto;
+}
+
+.doc-main{
+    margin-left: 300px;
+}
+
+.doc-box{
+    width: 100px;
+    height: 100px;
+    margin: .25rem;
+    background-color: #eee;
+    border: 1px solid #666;
+}

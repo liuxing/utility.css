@@ -1,3 +1,174 @@
-<h1>utility.css</h1>
-<p>A lightweight CSS collection of utility classes</p>
-<p>coming soon</p>
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Utility.css</title>
+    <link rel="stylesheet" href="../dist/utility.min.css">
+    <link rel="stylesheet" href="./docs.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside class="doc-sidebar-left width-2">
+            <h3>Documentation</h3>
+            <ul class="list">
+                <li><a href="#">border</a></li>
+                <li><a href="#">card</a></li>
+                <li><a href="#">clearfix</a></li>
+                <li><a href="#">flex</a></li>
+                <li><a href="#">float</a></li>
+                <li><a href="#">grid</a></li>
+                <li><a href="#">heading</a></li>
+                <li><a href="#">images</a></li>
+                <li><a href="#">list</a></li>
+                <li><a href="#">position</a></li>
+                <li><a href="#">spacing</a></li>
+                <li><a href="#">text</a></li>
+                <li><a href="#">visibility</a></li>
+                <li><a href="#">width</a></li>
+            </ul>
+        </aside>
+        <main class="doc-main">
+            <h1>Border</h1>
+            <div class="flex">
+                <div class="doc-box"></div>
+                <div class="doc-box border-0"></div>
+                <div class="doc-box border-top-0"></div>
+                <div class="doc-box border-right-0"></div>
+                <div class="doc-box border-bottom-0"></div>
+                <div class="doc-box border-left-0"></div>
+            </div>
+            <img width="200" height="200" class="border-rounded" src="avatar.jpg" alt="">
+            <img width="200" height="200" class="border-circle" src="avatar.jpg" alt="">
+            <h1>Float</h1>
+            <div class="clearfix">
+                <div class="doc-box float-left"></div>
+                <div class="doc-box float-right"></div>
+            </div>
+            <h1>Flex</h1>
+            <div class="flex">
+                <div class="doc-box"></div>
+                <div class="doc-box"></div>
+                <div class="doc-box"></div>
+            </div>
+            <table class="uk-table">
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>flex-left</code></td>
+                        <td>左对齐</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-center</code></td>
+                        <td>以中心主轴为准居中对齐</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-right</code></td>
+                        <td>右对齐</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-between</code></td>
+                        <td>以中心主轴为准均匀分配flex元素，使元素之间间距相等。</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-around</code></td>
+                        <td>均匀分配元素，使每个 flex 元素两侧具有相等的间距</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="flex flex-center">
+                <div class="doc-box"></div>
+                <div class="doc-box"></div>
+                <div class="doc-box"></div>
+            </div>
+
+            <div class="flex flex-right">
+                <div class="doc-box"></div>
+                <div class="doc-box"></div>
+                <div class="doc-box"></div>
+            </div>
+            <div class="flex flex-between">
+                <div class="doc-box"></div>
+                <div class="doc-box"></div>
+                <div class="doc-box"></div>
+            </div>
+            <table class="uk-table">
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>flex-stretch</code></td>
+                        <td>扩展flex条目填满父容器的高度</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-top</code></td>
+                        <td>对齐到顶部</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-middle</code></td>
+                        <td>以中心主轴为准居中对齐</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex-bottom</code></td>
+                        <td>对齐到底部</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h1>Heading</h1>
+            <p class="h1">Heading 1</p>
+            <p class="h2">Heading 2</p>
+            <p class="h3">Heading 3</p>
+            <p class="h4">Heading 4</p>
+            <p class="h5">Heading 5</p>
+            <p class="h6">Heading 6</p>
+
+            <h1>Position</h1>
+
+            <h1>Text</h1>
+            <h3>Text Align</h3>
+            <p class="text-left">.text-left</p>
+            <p class="text-center">.text-center</p>
+            <p class="text-right">.text-right</p>
+            <h3>Text weight</h3>
+            <p class="text-center text-lighter">.text-lighter</p>
+            <p class="text-center text-normal">.text-normal</p>
+            <p class="text-center text-bold">.text-bold</p>
+            <p class="text-center text-italic">.text-italic</p>
+            <h3>    Text wrapping</h3>
+            <p class="text-truncate width-1-2">.text-truncate .text-truncate .text-truncate .text-truncate .text-truncate .text-truncate .text-truncate .text-truncate
+                .text-truncate .text-truncate </p>
+            <p class="text-break width-1-2">.text-break text-break text-break text-break text-break text-break text-break text-break text-break</p>
+            <p class="text-nowrap width-1-2">.text-nowrap .text-nowrap .text-nowrap .text-nowrap .text-nowrap .text-nowrap .text-nowrap .text-nowrap .text-nowrap
+            </p>
+
+            <h1>Image</h1>
+            <img class="img-responsive" src="avatar.jpg" alt="">
+
+            <h1>Display</h1>
+            d-inline-block
+            <div class="doc-box d-inline-block"></div>
+            <div class="doc-box d-inline-block"></div>
+            <div class="doc-box d-inline-block"></div>
+
+            <span class="d-block">d-block</span>
+            d-inline
+            <div class="d-inline">d-inline</div>
+            <div class="d-inline">d-inline</div>
+        </main>
+    </div>
+</body>
+
+</html>
